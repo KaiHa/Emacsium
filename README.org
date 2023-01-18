@@ -1,0 +1,35 @@
+* Emacsium - Use your Emacs muscle memory to browse the web by keyboard shortcuts
+This is one of the many Firefox (Web-)Extensions that will provide you
+keyboard shortcuts to browse the web with Firefox.  I came up with a
+new one, because I want to be sure (to some degree) that the
+extensions I use are not doing any dubious stuff.  Furthermore it was
+a good way to learn some JavaScript.
+
+I strive to keep it small so that it stays maintainable and so that
+other people that might have an interest can, with reasonable effort,
+verify/falsify that this extensions does nothing against their will.
+
+This extension will handle keyboard shortcuts for the following tasks:
+ - opening links (in same and new tabs)
+ - scrolling in the website
+ - copying url and title of the current website into the clipboard
+ - navigating back and forth in the browser history
+
+* Usage
+If you want to try this extension you can load it as temporary add-on
+by opening =about:debugging#/runtime/this-firefox= in Firefox.
+
+Make sure to give /Emacsium/ some permissions (=about:addons= ->
+/Extensions/), because otherwise /Emacsium/ is not allowed to access
+any website.
+
+* Copyright
+This software is licensed under the MIT License.
+
+Copyright 2023 Kai Harries <kai.harries@posteo.de>
+
+* References
+- [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension][Your first extension - Mozilla | MDN]]
+- [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json][manifest.json - Mozilla | MDN]]
+- [[https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/][Manifest V3 migration guide | Firefox Extension Workshop]]
+- [[https://extensionworkshop.com/documentation/publish/add-on-policies/][Add-on Policies | Firefox Extension Workshop]]
