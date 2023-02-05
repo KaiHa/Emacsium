@@ -211,10 +211,11 @@ function transition2Help() {
                                 ["w", "Copy current URL as org-link to the clipboard"],
                                 ["n", "Scroll down by one line"],
                                 ["p", "Scroll up by one line"],
-                                ["<space>", "Scroll down by one page"],
+                                ["<space>", "Scroll down by one page (Firefox default)"],
                                 ["<backspace>", "Scroll up by one page"],
                                 ["M->", "Scroll to the end of the document"],
-                                ["M-<", "Scroll to the start of the document"] ]) {
+                                ["M-<", "Scroll to the start of the document"],
+                                ["F7", "Toggle caret browsing (Firefox default)"]]) {
         let tr = document.createElement("tr");
         let td = document.createElement("td");
         let code = document.createElement("code");
