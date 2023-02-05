@@ -188,6 +188,9 @@ function transition2Help() {
     let thead = tbl.createTHead();
     let tr = document.createElement("tr");
     let th = document.createElement("th");
+    let firefoxHelp = document.createElement('a');
+    firefoxHelp.append('Show help for Firefox standard key-bindings');
+    firefoxHelp.setAttribute('href', 'https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly');
     th.setAttribute("class", "emium-th");
     th.setAttribute("colspan", "2");
     th.append("Emacsium key bindings");
@@ -199,7 +202,8 @@ function transition2Help() {
     for (const [key, desc] of [ ["C-.", "Turn off Emacsium for the current tab (default binding)"],
                                 ["C-,", "Turn on Emacsium for the current tab (default binding)"],
                                 ["C-;", "Ignore next key"],
-                                ["?", "Show keybindings"],
+                                ["C-?", firefoxHelp],
+                                ["?", "Show Emacsium key-bindings"],
                                 ["f", "Show shortcuts for the links in the document"],
                                 ["F", "Show shortcuts for the links in the document (links are opened in a new tab)"],
                                 ["l", "Back in history"],
@@ -248,6 +252,10 @@ function standardHandler(keyEvent) {
         return true;
     case keyEvent.altKey && keyEvent.key === '>':
         window.scrollTo(0, document.body.scrollHeight);
+        return true;
+    case keyEvent.ctrlKey && keyEvent.key === '?':
+        browser.runtime.sendMessage({content: "openTab", href: 'https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly'})
+            .catch(err => console.error(`Failed to open link in tab: ${err}`));
         return true;
     case keyEvent.ctrlKey || keyEvent.key === 'Control'
             || keyEvent.altKey || keyEvent.key === 'Alt'

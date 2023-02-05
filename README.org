@@ -33,3 +33,4 @@ Copyright 2023 Kai Harries <kai.harries@posteo.de>
 - [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json][manifest.json - Mozilla | MDN]]
 - [[https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/][Manifest V3 migration guide | Firefox Extension Workshop]]
 - [[https://extensionworkshop.com/documentation/publish/add-on-policies/][Add-on Policies | Firefox Extension Workshop]]
+- [[https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly][Keyboard shortcuts - Perform common Firefox tasks quickly | Firefox Help]]
