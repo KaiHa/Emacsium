@@ -1,30 +1,41 @@
 {
-
   "manifest_version": 3,
   "name": "Emacsium",
   "version": "0.4",
   "description": "Use your Emacs muscle memory to browse the web by keyboard shortcuts",
   "author": "Kai Harries",
-
   "icons": {
     "48": "icons/emacsium.svg",
     "96": "icons/emacsium.svg"
   },
-
-  "permissions": [ "activeTab",
-                   "clipboardWrite",
-                   "scripting",
-                   "storage",
-                   "tabs"
-                 ],
-
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
   "host_permissions": [
     "<all_urls>"
   ],
-
-  "background": { "scripts": ["background.js"] },
-  "content_scripts": [ { "matches": ["<all_urls>"], "js": ["content.js"], "css": ["emium.css"] } ],
-
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "emium.css"
+      ]
+    }
+  ],
   "action": {
     "default_icon": {
       "16": "icons/emacsium.svg",
@@ -35,23 +46,24 @@
     "default_title": "Toggle Emacsium",
     "default_area": "tabstrip"
   },
-
   "commands": {
     "emium-off": {
-      "suggested_key": { "default": "Ctrl+Period" },
+      "suggested_key": {
+        "default": "Ctrl+Period"
+      },
       "description": "Turn off Emacsium for the current tab"
     },
     "emium-on": {
-      "suggested_key": { "default": "Ctrl+Comma" },
+      "suggested_key": {
+        "default": "Ctrl+Comma"
+      },
       "description": "Turn on Emacsium for the current tag"
     }
   },
-
   "browser_specific_settings": {
     "gecko": {
       "update_url": "https://raw.githubusercontent.com/KaiHa/Emacsium/main/updates.json",
       "id": "{13e3b1c8-a4b4-11ed-a5de-7be09f8647e8}"
     }
   }
-
 }
