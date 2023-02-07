@@ -329,9 +329,12 @@ function followHandler(keyEvent) {
     case keyEvent.key === 'Escape':
         transitionFollow2Standard();
         return true;
-    case keyEvent.ctrlKey || keyEvent.key === 'Control'
-            || keyEvent.altKey || keyEvent.key === 'Alt'
-            || keyEvent.key === 'Shift':
+    case keyEvent.key && keyEvent.altKey && keyEvent.shiftKey:  /* access key */
+        transitionFollow2Standard();
+        return false;
+    case keyEvent.key === 'Control' || keyEvent.key === 'Alt' || keyEvent.key === 'Shift' || keyEvent.key === 'Meta':
+        return false;
+    case keyEvent.key && (keyEvent.ctrlKey || keyEvent.altKey || keyEvent.shiftKey):
         return false;
     /* No key-bindings with control or alt key below this point! */
     default:
