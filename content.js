@@ -325,6 +325,7 @@ function helpHandler(closeFunc) {
  * keyEvent was handled.
  */
 function followHandler(keyEvent) {
+// TODO Links on the button of this page are not hinted [[https://www.jenkins.io/][Jenkins]]
     switch (true) {
     case keyEvent.key === 'Escape':
         transitionFollow2Standard();
