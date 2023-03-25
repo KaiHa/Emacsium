@@ -23,6 +23,10 @@ Make sure to give /Emacsium/ some permissions (=about:addons= ->
 /Extensions/), because otherwise /Emacsium/ is not allowed to access
 any website.
 
+* Guidance for me
+** Uploading a new version
+Go to [[https://addons.mozilla.org/en-US/developers/addons][Add-on Developer Hub]].
+
 * Copyright
 This software is licensed under the MIT License.
 
@@ -34,3 +38,4 @@ Copyright 2023 Kai Harries <kai.harries@posteo.de>
 - [[https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/][Manifest V3 migration guide | Firefox Extension Workshop]]
 - [[https://extensionworkshop.com/documentation/publish/add-on-policies/][Add-on Policies | Firefox Extension Workshop]]
 - [[https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly][Keyboard shortcuts - Perform common Firefox tasks quickly | Firefox Help]]
+- [[https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/][Signing and distribution overview | Firefox Extension Workshop]]
